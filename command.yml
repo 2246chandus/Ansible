@@ -1,0 +1,8 @@
+---
+ - name: "command module"
+   hosts: web
+   tasks:
+     - name: FS
+       command: df -h
+       register: stdout_lines
+     -  debug: var=stdout_lines

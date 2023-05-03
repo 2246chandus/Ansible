@@ -1,0 +1,11 @@
+---
+ - name: "This this loop tech"
+   hosts: web
+   tasks:
+     - name: yum update for packages
+       yum: name={{item}} state=latest
+       with_items:
+           - httpd
+           - ftp
+           - vsftpd
+           - telnet

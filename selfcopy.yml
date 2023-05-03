@@ -1,0 +1,7 @@
+---
+ - name: "Copy index.html"
+   hosts: local
+   tasks:
+     - name: "copy the file"
+       copy: src=/tmp/index.html dest=/. remote_src=yes
+       

@@ -1,0 +1,5 @@
+---
+ - name: "Display Message"
+   hosts: all
+   tasks: 
+    - debug: msg="welcome to chandu lap"

@@ -1,0 +1,6 @@
+---
+ - name: "Display Message"
+   hosts: all
+   tasks:
+    - debug: var=inventory_hostname
+      tags: host

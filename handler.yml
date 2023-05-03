@@ -1,0 +1,14 @@
+---
+ - name: Multiple Command Exe
+   hosts: all
+   tasks:
+     - name: "HTTPD"
+       yum: name=httpd state=present
+       tags: httpd
+     - name: "COPY"
+       copy: src=/tmp/index.html dest=/var/www/html/ 
+       notify: restart service
+   handlers:  
+     - name: restart service
+       service: name=httpd state=restarted
+       tags: httpdservice

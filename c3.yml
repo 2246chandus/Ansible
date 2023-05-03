@@ -1,0 +1,6 @@
+---
+ - name: "Display Message"
+   hosts: all
+   tasks:
+    - debug:
+        msg: "this the the hostname:{{inventory_hostname}}"

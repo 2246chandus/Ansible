@@ -1,0 +1,7 @@
+---
+ - name: This is Control-D Lab
+   hosts: test
+   tasks:
+     - name: "remove line"
+       lineinfile: dest=/etc/fstab line="/dev/sdh       /controlD       ext4    defaults        1       1"
+       tags: "linesubtract"

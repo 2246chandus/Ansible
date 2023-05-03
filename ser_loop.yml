@@ -1,0 +1,8 @@
+---
+ - name: "This this loop tech"
+   hosts: web
+   tasks:
+     - name: service update
+       service: 
+          name: "['httpd','vsftpd']"
+          state: restarted
